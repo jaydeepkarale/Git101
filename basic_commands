@@ -10,3 +10,29 @@ git config list
 # List particular configurations
 git config user.name
 
+# Stages of a file
+Committed files are the ones that have not changed since our last commit snapshot(after git commit)
+Modified are files that we have made changes to since the last commit(before git add)
+Staged are files that are marked to be added in next commit(after git add)
+
+Stage of a file can be checked using git status command
+
+git status -s will provide a short status
+
+# Git log
+git log will provide the history of all commits
+
+git log -1 will provide the lastest commit
+
+git log --oneline will provide the commit information in a single line
+
+git log --stat will provide detailed information in each commit along with files changed.
+
+git log --patch will provide an even more detailed output which contains the diff of all changes
+
+# git rm git mv
+git rm <filename> is used to remove a file
+
+git mv <oldfilename> <newfilename> is used to rename a file
+
+git rm --cached <filename> is used to untrack the file
