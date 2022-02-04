@@ -1,0 +1,12 @@
+# Set global config for all projects
+git config --global user.name "Marco Polo"
+git config --global user.email "Marco.Polo@mp.com"
+
+You can override the global configs for a paricular project by excluding the --global flag.
+
+# List all global configurations
+git config list
+
+# List particular configurations
+git config user.name
+
