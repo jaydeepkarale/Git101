@@ -1,0 +1,12 @@
+# The main or master is nothing special. It is just another branch and used by convention as a special branch.
+In theory one can easily create a different branch as a main/master
+
+# The output of the `git branch` command shows the current branches available and the active branch is marked with a *. How does git know which is the current
+active branch ? Simple, it store the information of the current active branch in the HEAD file under the .git sub-directory.
+
+# Fast-forward message while merging means git realized that there is an option to save creation of additonal objects
+& it changed the branch into which changes are being merged to point to the commit which already exists & contains the changes.
+refer image before & after merge Fast-forward
+
+
+
