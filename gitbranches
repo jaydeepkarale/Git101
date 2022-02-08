@@ -8,5 +8,7 @@ active branch ? Simple, it store the information of the current active branch in
 & it changed the branch into which changes are being merged to point to the commit which already exists & contains the changes.
 refer image before & after merge Fast-forward
 
-
+# Detached Head occurs when you decide to checkout a commit instead of a branch. These commits remain in the system for a while but are garbage collected by GIT 
+after sometime(this happens to all objects which cannot be reached via a branch). To save these commits you can create a branch on them otherwise they will be lost
+eventually.
 
