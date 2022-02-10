@@ -1,0 +1,11 @@
+Git allows two types of tags
+1. Lightweight tags are those which contain pointer to a commit and are created using the git tag <tagname>
+2. Annotated tags are those which contain a pointer to a tag object and are created using git tag <tagname> -a -m "some message"
+
+The difference between the two is that annotated tags store additional information because they are pointers to tag objects.
+
+You can view tags using `git tag` command.
+
+You can checkout a tag using the `git checkout <tagname>` command
+
+Git stores the tag in the same directory as the branches & you could in theory move the tag file from tags folder into heads folder & turn it into a branch
