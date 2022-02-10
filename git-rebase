@@ -1,0 +1,44 @@
+## MERGE
+When we merge two branches GIT creates a new commit with the last commit two branches being merged as parent.
+
+# Merge Visualized for merging MAIN into TEST
+
+           MAIN BRANCH
+          O --> O ----->
+         /               \
+1st     O                  O --> MERGE COMMIT
+common   \                /      TEST BRANCH  
+commit    \              /
+           O --> O --->
+          TEST BRANCH
+
+## REBASE
+When a REBASE is fired GIT simply looks for the 1st common commit of the branches being merged & 
+moves everything after that commit to the brach being merged
+
+Consider we are merging MAIN branch in TEST BRANCH
+           MAIN BRANCH
+           O --> O --> O --> O  TEST BRANCH
+          /             
+         / 
+1st     O   
+COMMON
+COMMIT
+
+Under the hood however, the copy is not straightforward i.e. GIT does not just pick the commits after the 1st common commit & move them.
+It creates duplicate commits & leaves the original commits at detached which is eligible for garbage collection
+
+           MAIN BRANCH
+           O --> O --> O --> O  TEST BRANCH WITH NEW COMMITS & NEW HASHES
+          /             
+         / 
+1st     O --> O --> O (old commits of TEST BRANCH are available for garbage collection unless a new branch is assigned)
+COMMON
+COMMIT
+          
+          
+MERGE vs REBASE
+--> MERGES preserve commit history
+--> REBASE refactors history to make it clean but can cause unwanted effects
+--> So, when in doubt, always MERGE
+          
